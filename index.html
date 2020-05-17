@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Python Online Compiler (Interpreter)</title>
+    <link
+      rel="shortcut icon"
+      href="https://cdn.programiz.com/sites/tutorial2program/files/programiz-favicon_3.png"
+      type="image/png"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=0"
+    />
+    <meta
+      name="description"
+      content="Write and run Python code using our online compiler (interpreter). You can use Python Shell like IDLE, and take inputs from the user in our Python compiler."
+    />
+    <link rel="stylesheet" href="playground.css" />
+    <style>
+      .sidebar-wrapper,
+      .editor-wrapper,
+      .terminal-wrapper {
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="spinner">
+        <div class="loader"><span>{</span><span>}</span></div>
+      </div>
+      <div class="wrapper">
+        <div class="mobile-top-bar clearfix">
+          <div class="options-wrapper">
+            <div id="back-button" class="options-item-wrapper clearfix">
+              <img class="svg options-item" src="assets/icons/back-arrow.svg" />
+            </div>
+          </div>
+          <div class="pills-wrapper">
+            <div class="pills clearfix">
+              <button class="pill active compiler-pill">
+                main.py
+              </button>
+              <button class="pill shell-pill">
+                Shell
+              </button>
+            </div>
+          </div>
+          <div class="other-options-wrapper">
+            <div id="feedback-mobile" class="options-item-wrapper">
+              <a href="https://programiz.com/contact" class="options-item">
+                <img class="svg" src="assets/icons/message-square.svg" />
+              </a>
+            </div>
+            <div
+              id="toggle-dark-mode-mobile"
+              class="options-item-wrapper clearfix"
+            >
+              <img
+                class="toggle-dark-mode-mobile-icon moon svg options-item"
+                src="assets/icons/moon.svg"
+              />
+              <img
+                class="toggle-dark-mode-mobile-icon sun svg options-item"
+                src="assets/icons/sun.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-wrapper">
+          <div id="toggle-dark-mode-desktop" title="Toggle theme">
+            <img
+              class="toggle-dark-mode-mobile-icon moon svg"
+              src="assets/icons/moon.svg"
+            />
+            <img
+              class="toggle-dark-mode-mobile-icon sun svg"
+              src="assets/icons/sun.svg"
+            />
+          </div>
+        </div>
+        <div class="editor-wrapper">
+          <div class="editor-desktop-top-bar">
+            <div class="file-name">main.py</div>
+            <button class="desktop-run-button run">
+              <span class="run-icon">
+                <img src="assets/icons/play.png" />
+              </span>
+              Run
+            </button>
+          </div>
+          <button class="mobile-run-button run">
+            <span class="run-icon">
+              <img src="assets/icons/play.png" />
+            </span>
+            Run
+          </button>
+          <div id="editor"></div>
+        </div>
+
+        <div class="terminal-wrapper">
+          <div class="terminal-desktop-top-bar">
+            <div class="shell-name">
+              Shell
+            </div>
+          </div>
+          <div id="terminal"></div>
+        </div>
+      </div>
+    </div>
+    <!-- The use of the cloudflare cdn for all external libraries is intential.
+      We are trying to reduce the number of DNS lookups.
+    -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+    ></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js"
+    ></script>
+    <script defer src="build/main.js"></script>
+  </body>
+</html>
